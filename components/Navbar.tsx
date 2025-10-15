@@ -46,14 +46,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Main Navbar */}
+      {/* Main Navbar - PREMIUM GLASSMORPHISM */}
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
-            : 'bg-white'
+            ? 'bg-white/80 backdrop-blur-2xl shadow-2xl border-b border-gray-200/50'
+            : 'bg-white/95 backdrop-blur-md'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,9 +85,10 @@ export default function Navbar() {
               ))}
               <Link
                 href="/kontakt"
-                className="bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-2.5 rounded-full font-semibold hover:from-gold-600 hover:to-gold-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="relative group bg-gradient-to-r from-gold-500 to-gold-600 text-white px-8 py-3 rounded-full font-bold hover:from-gold-600 hover:to-gold-700 transition-all shadow-lg hover:shadow-2xl hover:shadow-gold-500/50 transform hover:scale-105 overflow-hidden"
               >
-                Zakaži Obilazak
+                <span className="relative z-10">Zakaži Obilazak</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-gold-600 to-gold-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </Link>
             </div>
 
